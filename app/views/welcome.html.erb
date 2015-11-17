@@ -1,0 +1,30 @@
+<h1>Welcome!</h1>
+
+<h3>Please Sign In</h3>
+
+<form action="<%= session_path %>" method="POST"
+    autocomplete="false">
+  <input type="hidden" name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+  <input type="email" name="user[email]"
+    placeholder="Email"><br/>
+  <input type="password" name="user[password]"
+    placeholder="Password"><br/>
+  <input type="submit" value="Sign in">
+</form>
+
+
+<h3>Not a Member? Sign Up!</h3>
+
+<form action="<%= users_path %>" method="POST"
+    autocomplete="false">
+  <input type="hidden" name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+  <input type="email" name="user[email]"
+    placeholder="Email"><br/>
+  <input type="password" name="user[password]"
+    placeholder="Password"><br/>
+  <input type="submit" value="Sign up">
+</form>
