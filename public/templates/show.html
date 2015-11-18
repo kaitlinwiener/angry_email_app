@@ -1,0 +1,14 @@
+<main ng-controller="SpecificController as specificCtrl">
+  <div>
+    <div id="specificemail">
+      <h2>To: {{specificCtrl.email.recipient}}<h2></br>
+      <h2>{{specificCtrl.email.body}}</h2></br>
+    </div>
+    <div id="pagebottom">
+      <form ng-submit="specificCtrl.deleteEmail()"></br>
+      <input id="deleteforever" type="submit" value="Delete Forever"></br>
+      </form>
+      <a id="back" href="/application/angular">Back</a>
+    </div>
+  </div>
+</main>

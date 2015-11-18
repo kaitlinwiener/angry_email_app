@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
   root 'application#welcome'
+  get 'application/angular'
 
-  resources :emails
+  resources :emails, only: [:index, :create], defaults: {format: :json}
   resources :users
+
+  get '/search' => 'application#angular'
+
+  get '/emails' => 'application#emails'
+  delete '/emails/:id' =>'emails#destroy'
+  get '/emails/:id' =>'emails#show'
+  get '/main' => 'emails#new'
 
   get '/session' => 'session#current_user', defaults: { format: :json }
   post '/session' => 'session#create'

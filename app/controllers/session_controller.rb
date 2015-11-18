@@ -8,18 +8,18 @@ class SessionController < ApplicationController
 
       session[:session_token] = token
       user.update(session_token: token)
-
       flash[:message] = "Thank you for logging in!"
-      redirect_to new_email_path
+      redirect_to application_angular_path
     else
       flash[:message] = "Email / Password combo incorrect!"
+      redirect_to root_path
     end
 
   end
 
   def destroy
     log_out!
-
+    flash[:message] = ""
     redirect_to root_path
   end
 

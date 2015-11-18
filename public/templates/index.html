@@ -1,0 +1,18 @@
+<main ng-controller="EmailController as emailCtrl">
+
+<div id="checkpassword">
+  <form ng-submit="emailCtrl.secretPassword()">
+    <input id="enterpassword" type="text" placeholder="Enter the Secret Password"ng-model="emailCtrl.password"></br></br>
+    <input id="submitpassword" type="submit" value="Check for Available Emails..."></br>
+  </form>
+</div>
+
+<div id="hiddenemails">
+  <div ng-repeat="email in emailCtrl.emails">
+    <div id="emaillist" ng-show="emailCtrl.user_id === email.user_id">
+    <h3>Email to <a href="emails/{{email.id}}">{{email.recipient}}</a> written {{email.created_at}}</h3>
+    </div>
+  </div>
+  <a id="back" href="/application/angular">Don't Remember? Probably for the Best</a>
+</div>
+</main>

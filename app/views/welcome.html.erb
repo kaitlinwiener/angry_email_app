@@ -1,21 +1,31 @@
-<h1>Welcome!</h1>
+<h1><i>Scream into the Abyss</i></h1>
+<h4 id="motto">A safe place to type the emails you would immediately regret sending</h4>
 
-<h3>Please Sign In</h3>
+<% if flash[:message] %>
+<div id="flash">
+  <%= flash[:message] %>
+</div>
+<% end %>
 
-<form action="<%= session_path %>" method="POST"
-    autocomplete="false">
-  <input type="hidden" name="authenticity_token"
-    value="<%= form_authenticity_token %>">
+<div id="signin">
+<h3>Back for More?</h3>
 
-  <input type="email" name="user[email]"
-    placeholder="Email"><br/>
-  <input type="password" name="user[password]"
-    placeholder="Password"><br/>
-  <input type="submit" value="Sign in">
-</form>
+  <form action="<%= session_path %>" method="POST"
+      autocomplete="false">
+    <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
 
+    <input type="email" name="user[email]"
+      placeholder="Email"><br/>
+    <input type="password" name="user[password]"
+      placeholder="Password"><br/>
+    <input class="enterbutton" type="submit" value="Sign in">
+  </form>
+</div>
 
-<h3>Not a Member? Sign Up!</h3>
+<div id="signup">
+<h3>First time?</h3>
+
 
 <form action="<%= users_path %>" method="POST"
     autocomplete="false">
@@ -26,5 +36,6 @@
     placeholder="Email"><br/>
   <input type="password" name="user[password]"
     placeholder="Password"><br/>
-  <input type="submit" value="Sign up">
+  <input class="enterbutton" type="submit" value="Sign up">
 </form>
+</div>

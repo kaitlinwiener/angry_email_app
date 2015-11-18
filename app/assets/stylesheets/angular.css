@@ -1,0 +1,168 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  overflow: scroll;
+}
+
+input {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+ a {
+   color: red;
+ }
+
+#signin, #signup, #flash, #letter, #checkpassword, #hiddenemails, #specificemail {
+  text-align: center;
+  width: 30%;
+  margin-top: 40px;
+  margin-left: 35%;
+  margin-bottom: 40px;
+  color: white;
+  overflow: auto;
+}
+
+#specificemail {
+  border: 1px solid white;
+}
+
+#checkpassword {
+  margin-bottom: 20px;
+}
+
+#emaillist {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+#signin:hover, #signup:hover {
+  background-color: #F5F5F5;
+  color: black;
+  border-radius: 5px;
+}
+
+#flash {
+  color: red;
+  margin-bottom: 40px;
+}
+
+#letter {
+  width: 60%;
+  margin-left: 20%;
+}
+
+#logout {
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 12px;
+}
+
+#logout:hover {
+  color: red;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+body {
+  background-image: url("http://phosproject.com/wp-content/themes/phos_theme/images/7.jpg");
+  background-size: 100%;
+}
+
+textarea, #recipient {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+#recipient {
+  width: 250px;
+}
+
+.buttony {
+  width: 100%;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  height: 70px;
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.buttony:hover {
+  color: blue;
+  font-size: 45px;
+  overflow: auto;
+}
+
+.enterbutton {
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+.enterbutton:hover {
+  color: red;
+}
+
+#enterpassword {
+  font-size: 12px;
+  height: 20px;
+  width: 220px;
+  text-align: center;
+}
+
+#submitpassword {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+}
+
+#submitpassword:hover {
+  color: red;
+}
+
+h4 {
+  color: red;
+  font-size: 18px;
+}
+
+#motto {
+  margin: 0 auto;
+  text-align: center;
+  color: red;
+  font-weight: bolder;
+}
+
+#back {
+  text-align: center;
+  margin-top: 60px;
+  color: blue;
+}
+
+#deleteforever {
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 36px;
+  margin-bottom: 100px;
+}
+
+#deleteforever:hover {
+  color: red;
+  font-size: 45px;
+}
+
+#pagebottom {
+  text-align: center;
+}
