@@ -1,7 +1,7 @@
 <main ng-controller="EmailController as emailCtrl">
   <div id="letter">
-    <div id="angryletter">
-      <form>
+    <div>
+      <form ng-submit="emailCtrl.createEmail()" id="angryemail">
         <input type="text" id="recipient"
                ng-model="emailCtrl.newEmail.recipient"
                placeholder="Who pissed you off?"/></br></br>
@@ -15,7 +15,8 @@
         <h4>Secret Password: {{emailCtrl.word}}</h4></br></br>
         <input id="yellbutton" class="buttony" type="submit" value="YELL INTO THE ABYSS">
       </form>
-    </div></br></br>
+    </div>
+    </br></br>
       <h5>If it has been over 48 hours and you still feel inclined to send
       a previously scripted angry email, click <a href="/search">here</a></h5>
   </div>

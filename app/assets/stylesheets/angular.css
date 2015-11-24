@@ -27,6 +27,24 @@ input {
   border: 1px solid white;
 }
 
+#angryemail {
+  -webkit-transition: all 1000ms linear;
+  -moz-transition: all 1000ms linear;
+  -ms-transition: all 1000ms linear;
+  -o-transition: all 1000ms linear;
+  transition: all 1000ms linear;
+}
+
+#angryemail.hidden {
+    -moz-opacity: 0;
+    opacity: 0;
+    -moz-transform: scale(0.01);
+    -webkit-transform: scale(0.01);
+    -o-transform: scale(0.01);
+    -ms-transform: scale(0.01);
+    transform: scale(0.01);
+}
+
 #checkpassword {
   margin-bottom: 20px;
 }

@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   root 'application#welcome'
-  get 'application/angular'
 
   resources :emails, only: [:index, :create], defaults: {format: :json}
   resources :users
+
+  get '/application/angular'=>'application#angular'
 
   get '/search' => 'application#angular'
 
